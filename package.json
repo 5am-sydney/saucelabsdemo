@@ -1,0 +1,24 @@
+{
+  "name": "saucelabsdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests:headed": "env-cmd -f .env.uat npx playwright test login.spec.ts --headed",
+    "tests:headed:all": "env-cmd -f .env.prod npx playwright test --headed",
+    "tests:headed:all:debug": "env-cmd -f .env.prod npx playwright test --debug",
+    "tests:debug": "env-cmd -f .env.prod npx playwright test member-access.spec.js --debug",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "Alok Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "dotenv": "^16.4.7",
+    "env-cmd": "^10.1.0",
+    "playwright": "^1.49.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
